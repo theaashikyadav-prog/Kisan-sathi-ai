@@ -1,0 +1,6 @@
+{
+  "name": "Kisan Sathi AI - किसान साथी AI",
+  "description": "किसान साथी AI: किसान की समस्या, समाधान की सही राह। फसल रोग पहचान, मंडी भाव, मौसम पूर्वानुमान और उन्नत कृषि ज्ञान केंद्र।",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
