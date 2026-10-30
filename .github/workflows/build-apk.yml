@@ -14,7 +14,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
           
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -26,12 +25,12 @@ jobs:
         uses: android-actions/setup-android@v3
         
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
         
       - name: Install Capacitor dependencies
         run: |
-          npm install @capacitor/core @capacitor/android
-          npm install -D @capacitor/cli
+          npm install @capacitor/core @capacitor/android --legacy-peer-deps
+          npm install -D @capacitor/cli --legacy-peer-deps
           
       - name: Build web app
         run: npm run build
@@ -63,4 +62,3 @@ jobs:
           name: android-debug-apk
           path: android/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-          
